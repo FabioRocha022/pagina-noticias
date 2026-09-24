@@ -39,11 +39,11 @@ header nav ul {
     display: none;
 }
 
-section {
+section#container-main {
     position: relative;
 }
 
-section:hover {
+section#container-main:hover {
     bottom: 3px;
     right: 3px;
     cursor: pointer;
@@ -63,6 +63,8 @@ section#container-main {
     display: flex;
     flex-flow: column;
     background-color: var(--back-sec);
+    box-shadow: 1px 2px 1px #0107145b ;
+    border-radius: 8px;
 }
 
 section#container-main img {
@@ -99,13 +101,27 @@ section#container-main article p {
 }
 
 section#container-second {
+    display: flex;
+    flex-flow: column;
     grid-column: 2;
     padding: 10px;
 }
 
+section#container-second hr {
+    border: 0px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+section#container-second h2 {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.4em;
+    color: var(--h-color);
+}
+
 section#container-second article{
     display: flex;
-    justify-content: space-between;
+    position: relative;
     margin-bottom: 10px;
     font-size: .6em;
     color: var(--h-color);
@@ -113,6 +129,7 @@ section#container-second article{
     background-color: var(--back-sec);
     padding: 5px;
     border-radius: 8px;
+    box-shadow: 1px 2px 1px #0107145b ;
 }
 
 section#container-second article img{
@@ -123,5 +140,19 @@ section#container-second article img{
 
 section#container-second article h3 {
     padding-left: 15px;
+    font-size: 1.4em;
+}
+
+section#container-second article:hover {
+    bottom: 3px;
+    right: 3px;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+    section#container-second {
+        flex-flow: column wrap;
+    }   
 }
 
