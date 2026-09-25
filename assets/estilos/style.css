@@ -248,9 +248,14 @@ footer a:hover {
         list-style-type: none;
     }
 
-    header nav ul li {
+    header nav ul li  {
         padding: 10px;
         font-size: .8em;
+    }
+
+    header nav ul a {
+        text-decoration: none;
+        color: white;
     }
 
     header nav ul li:hover {
